@@ -30,8 +30,8 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-
   /* background: color image repeat position/size (Shorthand/Atalho)*/
+  height: 100vh;
 }
 
 body * {
@@ -195,3 +195,14 @@ Linguagem de programação interpretada e executada pelos navegadores;
 A inteligência da tríade onde HTML é a estrutura, CSS é a beleza e JS é a inteligência;
 Não é JAVA, apesar do nome ser semelhante, são linguagens diferentes.
 */
+
+/*media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  }
+}

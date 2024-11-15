@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.1);
+  --switch-bg-url: url(./assets/assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/assets/sun.svg);
+}
+
+body {
+  /*Qual a propriedade que adiciona uma imagem de fundo ao elemento selecionado?*/
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  /* background: color image repeat position/size (Shorthand/Atalho)*/
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  /*border: 1px solid red;*/
+  margin: 56px auto 0px; /*(Reloginho)*/
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  /* 
+  (css tricks)
+  O que é o margin e o padding em css? A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas, ou seja, o espaçamento interno. Já o margin , irá definir a distância a partir da borda de um elemento até outro elemento, sendo assim, o espaçamento externo.
+  */
+  padding: 24px;
+}
+
+#profile img {
+  /*O que é o display none em CSS? É uma propriedade que oculta um elemento da página.*/
+  display: block;
+  width: 112px;
+  /*Qual é uma forma de centralizar um elemento usando CSS?*/
+  margin: auto;
+  /*A altura(height) sempre segue o padrão do conteúo*/
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 32px;
+  margin-top: 8px;
+  margin: auto;
+  width: 112px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*switch*/
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 0 auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+
+  background: var(--surface-color);
+
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*Links*/
+ul {
+  /*Como remover os estilos de uma lista?*/
+  list-style: none;
+
+  display: flex;
+  /*Qual a diferença em usar flex-direction: row e flex-direction: column? A propriedade CSS \"flex-direction: row\" define que os itens dentro de um container flex devem ser posicionados em uma linha horizontal, enquanto \"flex-direction: column\" define que os itens devem ser posicionados em uma coluna vertical.*/
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /*Can I Use(Procurar na internet funcionalidades que contém erro em alguns browsers)*/
+
+  text-decoration: none; /*Como remover os estilos de uma tag a no HTML?*/
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+/*pseudo-seletor o que é? Os pseudosseletores são uma forma de selecionar elementos HTML com base em seu estado ou posição em relação a outros elementos.*/
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  /*A tag "a" é inline*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*O que são as DevTools no navegador? As DevTools são um conjunto de ferramentas de desenvolvimento integradas ao navegador para depuração, edição e otimização de sites e aplicativos da web.*/
+
+/*
+JavaScript
+O que é: 
+Linguagem de programação interpretada e executada pelos navegadores;
+A inteligência da tríade onde HTML é a estrutura, CSS é a beleza e JS é a inteligência;
+Não é JAVA, apesar do nome ser semelhante, são linguagens diferentes.
+*/

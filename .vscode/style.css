@@ -204,7 +204,7 @@ A inteligência da tríade onde HTML é a estrutura, CSS é a beleza e JS é a i
 Não é JAVA, apesar do nome ser semelhante, são linguagens diferentes.
 */
 
-/*media queries*/
+/*media queries: As media queries permitem adaptar a apresentação de um documento a diferentes dispositivos*/
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/assets/bg-desktop.jpg);

@@ -12,7 +12,9 @@ function toggleMode() {
 
   if (html.classList.contains("light")) {
     img.setAttribute("src", "./assets/avatar-light.png")
+    img.setAttribute("alt", "Foto de Tales Porto sorrindo, usando camisa preta, óculos de sol, barba e no fundo uma casa amarela.")
   } else {
     img.setAttribute("src", "./assets/avatar.png")
+    img.setAttribute("alt", "Foto de Tales Porto sorrindo, usando blusa de frio, barba e no fundo uma lagoa.")
   }
 }
